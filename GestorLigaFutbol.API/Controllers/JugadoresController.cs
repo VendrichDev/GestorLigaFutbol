@@ -16,7 +16,12 @@ public class JugadoresController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Jugador>>> GetJugador()
     {
-        return await _context.Jugadores.ToListAsync();
+        var jugadores = await _context.Jugadores.
+            Include(j => j.equipo).
+            Include(j => j.Goles)
+            .AsNoTracking()
+            .ToListAsync(); ;
+        return jugadores;
     }
 
     // GET: api/Jugador/5

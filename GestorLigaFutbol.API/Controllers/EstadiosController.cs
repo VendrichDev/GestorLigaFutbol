@@ -16,7 +16,12 @@ public class EstadiosController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Estadio>>> GetEstadio()
     {
-        return await _context.Estadios.ToListAsync();
+        var estadios = await _context.Estadios
+            .Include(e => e.Partidos).ThenInclude(p => p.equipoLocal)
+            .Include(e => e.Partidos).ThenInclude(p => p.equipoVisitante)
+            .AsNoTracking()
+            .ToListAsync();
+        return estadios;
     }
 
     // GET: api/Estadio/5

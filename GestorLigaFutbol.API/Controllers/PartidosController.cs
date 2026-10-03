@@ -16,7 +16,13 @@ public class PartidosController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Partido>>> GetPartido()
     {
-        return await _context.Partidos.ToListAsync();
+        var partidos = await _context.Partidos.
+            Include(p => p.equipoLocal).
+            Include(p => p.equipoVisitante).
+            Include(p => p.estadio).
+            Include(p => p.Goles)
+            .ToListAsync();
+        return partidos;
     }
 
     // GET: api/Partido/5

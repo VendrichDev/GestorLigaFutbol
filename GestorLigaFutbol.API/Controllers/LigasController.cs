@@ -16,7 +16,10 @@ public class LigasController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Liga>>> GetLiga()
     {
-        return await _context.Ligas.ToListAsync();
+        var ligas = await _context.Ligas
+        .Include(e => e.Equipos)
+        .ToListAsync();
+        return ligas;
     }
 
     // GET: api/Liga/5

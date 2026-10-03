@@ -16,7 +16,12 @@ public class GolesController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Gol>>> GetGol()
     {
-        return await _context.Goles.ToListAsync();
+        var goles = await _context.Goles
+            .Include(g => g.jugador)
+            .Include(g => g.partido)
+            .AsNoTracking()
+            .ToListAsync(); 
+        return goles;
     }
 
     // GET: api/Gol/5
