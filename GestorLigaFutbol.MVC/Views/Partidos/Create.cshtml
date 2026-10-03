@@ -1,0 +1,90 @@
+@model GestorLigaFutbol.Models.Partido
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Partido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FechaHora" class="control-label"></label>
+                <input asp-for="FechaHora" class="form-control" />
+                <span asp-validation-for="FechaHora" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GolesLocal" class="control-label"></label>
+                <input asp-for="GolesLocal" class="form-control" />
+                <span asp-validation-for="GolesLocal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="GolesVisitante" class="control-label"></label>
+                <input asp-for="GolesVisitante" class="form-control" />
+                <span asp-validation-for="GolesVisitante" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Jugado" class="control-label"></label>
+                <input asp-for="Jugado" class="form-check-input" />
+                <span asp-validation-for="Jugado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EquipoLocalId" class="control-label"></label>
+                <input asp-for="EquipoLocalId" class="form-control" />
+                <span asp-validation-for="EquipoLocalId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="equipoLocal" class="control-label"></label>
+                <input asp-for="equipoLocal" class="form-control" />
+                <span asp-validation-for="equipoLocal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EquipoVisitanteId" class="control-label"></label>
+                <input asp-for="EquipoVisitanteId" class="form-control" />
+                <span asp-validation-for="EquipoVisitanteId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="equipoVisitante" class="control-label"></label>
+                <input asp-for="equipoVisitante" class="form-control" />
+                <span asp-validation-for="equipoVisitante" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EstadioId" class="control-label"></label>
+                <input asp-for="EstadioId" class="form-control" />
+                <span asp-validation-for="EstadioId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="estadio" class="control-label"></label>
+                <input asp-for="estadio" class="form-control" />
+                <span asp-validation-for="estadio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Goles" class="control-label"></label>
+                <input asp-for="Goles" class="form-control" />
+                <span asp-validation-for="Goles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

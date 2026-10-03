@@ -1,0 +1,94 @@
+@model GestorLigaFutbol.Models.Partido
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Partido</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaHora)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaHora)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GolesLocal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GolesLocal)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GolesVisitante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GolesVisitante)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Jugado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Jugado)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EquipoLocalId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EquipoLocalId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.equipoLocal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.equipoLocal)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EquipoVisitanteId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EquipoVisitanteId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.equipoVisitante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.equipoVisitante)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadioId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadioId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estadio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estadio)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Goles)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Goles)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

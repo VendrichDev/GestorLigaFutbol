@@ -1,0 +1,52 @@
+@model GestorLigaFutbol.Models.Gol
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Gol</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Minuto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Minuto)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PartidoId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PartidoId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.partido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.partido)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JugadorId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JugadorId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.jugador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.jugador)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,69 @@
+@model GestorLigaFutbol.Models.Equipo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Equipo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ciudad" class="control-label"></label>
+                <input asp-for="Ciudad" class="form-control" />
+                <span asp-validation-for="Ciudad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnioFundacion" class="control-label"></label>
+                <input asp-for="AnioFundacion" class="form-control" />
+                <span asp-validation-for="AnioFundacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LigaId" class="control-label"></label>
+                <input asp-for="LigaId" class="form-control" />
+                <span asp-validation-for="LigaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liga" class="control-label"></label>
+                <input asp-for="liga" class="form-control" />
+                <span asp-validation-for="liga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jugadores" class="control-label"></label>
+                <input asp-for="Jugadores" class="form-control" />
+                <span asp-validation-for="Jugadores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartidosLocal" class="control-label"></label>
+                <input asp-for="PartidosLocal" class="form-control" />
+                <span asp-validation-for="PartidosLocal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartidosVisitante" class="control-label"></label>
+                <input asp-for="PartidosVisitante" class="form-control" />
+                <span asp-validation-for="PartidosVisitante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

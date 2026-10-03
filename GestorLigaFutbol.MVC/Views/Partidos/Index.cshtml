@@ -1,0 +1,95 @@
+@model IEnumerable<GestorLigaFutbol.Models.Partido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GolesLocal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GolesVisitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jugado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EquipoLocalId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.equipoLocal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EquipoVisitanteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.equipoVisitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.estadio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goles)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.FechaHora)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.GolesLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.GolesVisitante)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Jugado)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EquipoLocalId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.equipoLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EquipoVisitanteId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.equipoVisitante)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EstadioId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.estadio)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Goles)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

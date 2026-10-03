@@ -1,0 +1,71 @@
+@model IEnumerable<GestorLigaFutbol.Models.Jugador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Posicion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DorsalCamisa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EquipoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.equipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goles)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Posicion)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DorsalCamisa)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EquipoId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.equipo)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Goles)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

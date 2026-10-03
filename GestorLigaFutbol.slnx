@@ -2,4 +2,5 @@
   <Project Path="GestorLigaFutbol.API/GestorLigaFutbol.API.csproj" />
   <Project Path="GestorLigaFutbol.Consumer/GestorLigaFutbol.Consumer.csproj" />
   <Project Path="GestorLigaFutbol.Models/GestorLigaFutbol.Models.csproj" />
+  <Project Path="GestorLigaFutbol.MVC/GestorLigaFutbol.MVC.csproj" />
 </Solution>
